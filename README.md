@@ -1,23 +1,13 @@
+Credit Card Fraud Detection using Machine Learning
 
-# Credit Card Fraud Detection using Machine Learning
+1). Built an end-to-end fraud detection system on a highly imbalanced real-world credit card transactions dataset
 
-## Project Overview
-This project aims to identify fraudulent credit card transactions within a highly imbalanced dataset. Since fraud accounts for only **0.17%** of the data, we utilize **SMOTE** (Synthetic Minority Over-sampling Technique) to balance the classes and improve model performance.
+2). Applied SMOTE to handle class imbalance and prevent biased learning
 
-## Dataset Information
-The dataset consists of credit card transactions made by European cardholders in September 2013.
-* **Total Rows**: 284,807
-* **Total Columns**: 31 (Time, Amount, Class, and PCA-transformed features V1-V28)
-* **Target Variable**: `Class` (1 for fraud, 0 for legitimate)
+3). Trained and evaluated models with XGBoost and Logistic Regression
 
-## Methodology
-1.  **Preprocessing**: Removed duplicates and dropped the 'Time' column as it was non-essential for this specific analysis.
-2.  **Visualization**: Analyzed the distribution of transaction amounts and class imbalance using `ggplot` styled graphs.
-3.  **Balancing**: Applied SMOTE to oversample the minority fraud class.
-4.  **Modeling**: Evaluated Logistic Regression and **XGBoost** models.
+4). Focused on ROC-AUC, Precision, Recall, and F1-score instead of misleading accuracy
 
-## Final Results (XGBoost)
-The XGBoost model achieved high performance in detecting fraud:
-* **Accuracy**: ~99.91%
-* **Precision**: ~97.28%
-* **Recall**: ~90.73%
+5). Used decision threshold tuning to simulate realistic fraud detection behavior
+
+6). Visualized performance using Confusion Matrix, ROC Curve, and Precision–Recall Curve
